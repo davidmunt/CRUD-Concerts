@@ -1,0 +1,52 @@
+# Ignorar carpeta frontend1 completa
+/frontend1/
+
+############################
+# Node.js (backend & frontend)
+############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+############################
+# Build / dist
+############################
+# Angular (frontend)
+frontend/dist/
+frontend/.angular/cache/
+
+# Express (backend, si generas builds)
+backend/dist/
+
+############################
+# Logs
+############################
+logs
+*.log
+*.out
+*.err
+
+############################
+# Sistema operativo
+############################
+.DS_Store
+Thumbs.db
+
+############################
+# IDEs / Editores
+############################
+.vscode/
+.idea/
+*.swp
+*.swo
+
+############################
+# Otros
+############################
+.env
+.env.*        # Por si tienes varias variantes (.env.local, .env.prod, etc.)

@@ -1,0 +1,4 @@
+back: node index.js y si no esta encendido el mongo: net start MongoDB
+
+
+front: npm start
