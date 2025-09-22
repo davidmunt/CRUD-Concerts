@@ -1,4 +1,3 @@
-# Ignorar carpeta frontend1 completa
 /frontend1/
 
 ############################
@@ -49,4 +48,7 @@ Thumbs.db
 # Otros
 ############################
 .env
-.env.*        # Por si tienes varias variantes (.env.local, .env.prod, etc.)
+.env.*
+
+
+/frontend/src/app/shared/
