@@ -31,11 +31,13 @@ npm install
 npm run dev
 ```
 
-# 👉 Si MongoDB no está corriendo, inícialo con:
+### 👉 Si MongoDB no está corriendo, inícialo con:
+```bash
 net start MongoDB
+```
 
-# El backend se ejecutará por defecto en:
-# http://localhost:3001
+### El backend se ejecutará por defecto en:
+### http://localhost:3001
 
 
 ### 3. Iniciar el Frontend
@@ -47,14 +49,14 @@ npm install
 npm start
 ```
 
-# El frontend se ejecutará por defecto en:
-# http://localhost:4200
+### El frontend se ejecutará por defecto en:
+### http://localhost:4200
 
-# 🚀 Funcionalidades
-# - Crear, leer, actualizar y eliminar conciertos
-# - Conexión a MongoDB para persistencia de datos
-# - API en Express.js con rutas REST
-# - Interfaz en Angular para la gestión de conciertos
+### 🚀 Funcionalidades
+### - Crear, leer, actualizar y eliminar conciertos
+### - Conexión a MongoDB para persistencia de datos
+### - API en Express.js con rutas REST
+### - Interfaz en Angular para la gestión de conciertos
 
-# 👨‍💻 Desarrollado por:
-# David Muntean
+### 👨‍💻 Desarrollado por:
+### David Muntean
