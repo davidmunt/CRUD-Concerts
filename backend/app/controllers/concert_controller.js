@@ -59,7 +59,10 @@ async function delete_concert(req, res) {
 }
 
 async function update_concert(req, res) {
+  // console.log("👉 Params:", req.params);
+  // console.log("👉 Body:", req.body);
   try {
+    // console.log("Request body:", req.body);
     const slug = req.params.slug;
     const old_concert = await Concert.findOne({ slug: slug });
 

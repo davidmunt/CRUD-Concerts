@@ -19,10 +19,12 @@ export class ConcertService {
   }
 
   create_concert(concert: Concert): Observable<Concert> {
+    console.log(concert);
     return this.apiService.post(`/concerts/`, concert);
   }
 
   update_concert(slug: String, concert: Concert): Observable<Concert> {
+    console.log(concert);
     return this.apiService.put(`/concerts/${slug}`, concert);
   }
 

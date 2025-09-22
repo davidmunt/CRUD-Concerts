@@ -14,6 +14,7 @@
         <label for="name" class="form-label">Nombre del concierto</label>
         <input
           id="name"
+          formControlName="name"
           type="text"
           class="form-input"
           placeholder="Ej: Rock Fest 2025"
@@ -25,7 +26,13 @@
       <!-- Date -->
       <div class="form-div-input">
         <label for="date" class="form-label">Fecha y hora</label>
-        <input id="date" type="datetime-local" class="form-input" required />
+        <input
+          id="date"
+          formControlName="date"
+          type="datetime-local"
+          class="form-input"
+          required
+        />
         <div class="invalid-feedback">La fecha es obligatoria.</div>
       </div>
 
@@ -34,6 +41,7 @@
         <label for="direction" class="form-label">Dirección</label>
         <input
           id="direction"
+          formControlName="direction"
           type="text"
           class="form-input"
           placeholder="Ej: Palau Sant Jordi, Barcelona"
@@ -49,6 +57,7 @@
         </label>
         <input
           id="protagonist"
+          formControlName="protagonist"
           type="text"
           class="form-input"
           placeholder="Ej: Metallica"
@@ -62,6 +71,7 @@
         <label for="description" class="form-label">Descripción</label>
         <textarea
           id="description"
+          formControlName="description"
           class="form-input"
           rows="4"
           placeholder="Descripción breve del concierto (opcional)"
@@ -71,7 +81,12 @@
       <!-- Buttons -->
       <div class="form-buttons">
         <button type="submit" class="btn-send" id="btn-send">Guardar</button>
-        <button type="button" class="btn-cancell" id="btn-cancell">
+        <button
+          type="button"
+          class="btn-cancell"
+          id="btn-cancell"
+          routerLink="/home"
+        >
           Cancelar
         </button>
       </div>

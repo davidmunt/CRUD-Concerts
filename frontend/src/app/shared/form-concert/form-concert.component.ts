@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Concert } from '../../core/models/concert.model';
 import { ConcertService } from '../../core/services/concert.service';
 import { ToastrService } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -62,14 +61,18 @@ export class ConcertFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // this.submitted = true;
-    // if (this.form.valid) {
-    //   if (this.update) {
-    //     this.update_concert();
-    //   } else {
-    //     this.insert_concert();
-    //   }
-    // }
+    this.submitted = true;
+    if (this.form.valid) {
+      if (this.update) {
+        console.log('LLega aqqquiiii');
+        this.update_concert();
+      } else {
+        console.log('LLega aqqquiiii');
+        this.insert_concert();
+      }
+    } else {
+      return;
+    }
   }
 
   get_concert(slug: string): void {
@@ -88,26 +91,26 @@ export class ConcertFormComponent implements OnInit {
   }
 
   insert_concert(): void {
-    console.log(`Created`);
-    // this.concertService.create_concert(this.form.value).subscribe({
-    //   next: (data) => {
-    //     this.router.navigate(['/concert']);
-    //     this.toastrService.success('Concert added successfully');
-    //   },
-    //   error: (e) => console.error(e),
-    // });
+    // console.log(`Created`);
+    this.concertService.create_concert(this.form.value).subscribe({
+      next: (data) => {
+        this.router.navigate(['/home']);
+        this.toastrService.success('Concert added successfully');
+      },
+      error: (e) => console.error(e),
+    });
   }
 
   update_concert(): void {
-    console.log(`Update: ${this.route.snapshot.params['slug']}`);
-    // this.concertService
-    //   .update_concert(this.form.value, this.route.snapshot.params['slug'])
-    //   .subscribe({
-    //     next: (data) => {
-    //       this.router.navigate(['/concert']);
-    //       this.toastrService.success('Concert updated successfully');
-    //     },
-    //     error: (e) => console.error(e),
-    //   });
+    // console.log(`Update: ${this.route.snapshot.params['slug']}`);
+    this.concertService
+      .update_concert(this.route.snapshot.params['slug'], this.form.value)
+      .subscribe({
+        next: (data) => {
+          this.router.navigate(['/home']);
+          this.toastrService.success('Concert updated successfully');
+        },
+        error: (e) => console.error(e),
+      });
   }
 }
